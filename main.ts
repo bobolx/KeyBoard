@@ -12,52 +12,40 @@ enum btnList{
     S5 = 5
 }
 
-enum eventList {
-    //% block="按下"
-    pressed = 1,
-    //% block="抬起"
-    released = 0
-}
+// enum eventList {
+//     //% block="按下"
+//     pressed = 1,
+//     //% block="抬起"
+//     released = 0
+// }
 
 //% weight=99 icon="\uf0e7" color=#1B80C4
 namespace KeyBoard {
 
-    //% weight=79
-    //% blockId="btn_pressed" block="连接引脚 %pin| 按钮 %btn|  %btnEvent"
-    export function btnPressed(pin: AnalogPin, btn:btnList, btnEvent:eventList): boolean {
+    //% weight=99
+    //% blockId="btn_pressed" block="连接引脚 %pin| 按钮 %btn|  按下"
+    export function btnPressed(pin: AnalogPin, btn:btnList): boolean {
 
         if(btn == btnList.S1){
-            if(btnEvent == eventList.pressed){
-                return pins.analogReadPin(pin) > 570 && pins.analogReadPin(pin) < 590;
-            }else{
-                return pins.analogReadPin(pin) > 1010;
-            }  
+            return pins.analogReadPin(pin) > 570 && pins.analogReadPin(pin) < 590;
         }else if(btn == btnList.S2){
-            if(btnEvent == eventList.pressed){
-                return pins.analogReadPin(pin) > 630 && pins.analogReadPin(pin) < 650;
-            }else{
-                return pins.analogReadPin(pin) > 1010;
-            }   
+            return pins.analogReadPin(pin) > 630 && pins.analogReadPin(pin) < 650;  
         }else if(btn == btnList.S3){
-            if(btnEvent == eventList.pressed){
-                return pins.analogReadPin(pin) > 690 && pins.analogReadPin(pin) < 710;
-            }else{
-                return pins.analogReadPin(pin) > 1010;
-            } 
-        }else if(btn == btnList.S4){
-            if(btnEvent == eventList.pressed){
-                return pins.analogReadPin(pin) > 770 && pins.analogReadPin(pin) < 790;
-            }else{
-                return pins.analogReadPin(pin) > 1010;
-            }  
+            return pins.analogReadPin(pin) > 690 && pins.analogReadPin(pin) < 710;
+        }else if(btn == btnList.S4){ 
+            return pins.analogReadPin(pin) > 770 && pins.analogReadPin(pin) < 790;
         }else{
-            if(btnEvent == eventList.pressed){
-                return pins.analogReadPin(pin) > 880 && pins.analogReadPin(pin) < 1000;
-            }else{
-                return pins.analogReadPin(pin) > 1010;
-            }   
+            return pins.analogReadPin(pin) > 880 && pins.analogReadPin(pin) < 1000;
         }
         
+    }
+    
+    //% weight=98
+    //% blockId="btn_released" block="连接引脚 %pin| 按钮抬起"
+    export function btnPressed(pin: AnalogPin): boolean {
+
+        return pins.analogReadPin(pin) > 1010;
+           
     }
 
 }
