@@ -12,13 +12,6 @@ enum btnList{
     S5 = 5
 }
 
-// enum eventList {
-//     //% block="按下"
-//     pressed = 1,
-//     //% block="抬起"
-//     released = 0
-// }
-
 //% weight=99 icon="\uf0e7" color=#1B80C4
 namespace KeyBoard {
 
