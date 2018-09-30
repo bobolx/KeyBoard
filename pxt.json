@@ -1,0 +1,13 @@
+{
+    "name": "KeyBoard",
+    "dependencies": {
+        "core": "*"
+    },
+    "description": "奥松机器人 模拟式五路大按键模块",
+    "icon": "./KeyBoard.jpg",
+    "license": "MIT",
+    "files": [
+        "main.ts"
+    ],
+    "public": true
+}
