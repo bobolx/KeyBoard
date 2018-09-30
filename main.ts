@@ -27,22 +27,32 @@ namespace KeyBoard {
     export function btnPressed(pin: AnalogPin, btn:btnList): boolean {
 
         if(btn == btnList.S1){
+
             return pins.analogReadPin(pin) > 570 && pins.analogReadPin(pin) < 590;
+
         }else if(btn == btnList.S2){
-            return pins.analogReadPin(pin) > 630 && pins.analogReadPin(pin) < 650;  
+
+            return pins.analogReadPin(pin) > 630 && pins.analogReadPin(pin) < 650;
+
         }else if(btn == btnList.S3){
+
             return pins.analogReadPin(pin) > 690 && pins.analogReadPin(pin) < 710;
-        }else if(btn == btnList.S4){ 
+
+        }else if(btn == btnList.S4){
+
             return pins.analogReadPin(pin) > 770 && pins.analogReadPin(pin) < 790;
+
         }else{
+
             return pins.analogReadPin(pin) > 880 && pins.analogReadPin(pin) < 1000;
+
         }
         
     }
     
     //% weight=98
     //% blockId="btn_released" block="连接引脚 %pin| 按钮抬起"
-    export function btnPressed(pin: AnalogPin): boolean {
+    export function btnreleased(pin: AnalogPin): boolean {
 
         return pins.analogReadPin(pin) > 1010;
            
