@@ -30,31 +30,31 @@ namespace KeyBoard {
             if(btnEvent == eventList.pressed){
                 return pins.analogReadPin(pin) > 570 && pins.analogReadPin(pin) < 590;
             }else{
-                return pins.analogReadPin(pin) > 1050;
+                return pins.analogReadPin(pin) > 1010;
             }  
         }else if(btn == btnList.S2){
             if(btnEvent == eventList.pressed){
                 return pins.analogReadPin(pin) > 630 && pins.analogReadPin(pin) < 650;
             }else{
-                return pins.analogReadPin(pin) > 1050;
+                return pins.analogReadPin(pin) > 1010;
             }   
         }else if(btn == btnList.S3){
             if(btnEvent == eventList.pressed){
                 return pins.analogReadPin(pin) > 690 && pins.analogReadPin(pin) < 710;
             }else{
-                return pins.analogReadPin(pin) > 1050;
+                return pins.analogReadPin(pin) > 1010;
             } 
         }else if(btn == btnList.S4){
             if(btnEvent == eventList.pressed){
                 return pins.analogReadPin(pin) > 770 && pins.analogReadPin(pin) < 790;
             }else{
-                return pins.analogReadPin(pin) > 1050;
+                return pins.analogReadPin(pin) > 1010;
             }  
         }else{
             if(btnEvent == eventList.pressed){
                 return pins.analogReadPin(pin) > 880 && pins.analogReadPin(pin) < 1000;
             }else{
-                return pins.analogReadPin(pin) > 1050;
+                return pins.analogReadPin(pin) > 1010;
             }   
         }
         
